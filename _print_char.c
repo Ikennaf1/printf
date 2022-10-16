@@ -7,9 +7,7 @@
  */
 int _print_char(va_list arg)
 {
-	int num_char = 0;
+	_putchar(va_arg(arg, int));
 
-	num_char += _putchar(va_arg(arg, int));
-
-	return (num_char);
+	return (1);
 }
