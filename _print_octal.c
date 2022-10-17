@@ -5,12 +5,12 @@
  * @n: Given integer
  * Return: Void
  */
-void _recursive_print_octal(int n)
+void _recursive_print_octal(int n, word_buffer *wb)
 {
 	if (n / 8)
-		_recursive_print_octal(n / 8);
+		_recursive_print_octal(n / 8, wb);
 
-	_putchar((n % 8) + '0');
+	_word_buffer_append(wb, (n % 8) + '0');
 }
 
 /**
@@ -18,27 +18,18 @@ void _recursive_print_octal(int n)
  * @arg: Given arg
  * Return: The converted number
  */
-int _print_octal(va_list arg)
+int _print_octal(va_list arg, word_buffer *wb)
 {
-	int n, num_char = 0;
+	int num_char = 0;
 	int num = va_arg(arg, int);
-
-	n = num;
 
 	if (num < 0)
 	{
-		_putchar('-');
-		n *= -1;
-		num = n;
+		_word_buffer_append(wb, '-');
+		num *= -1;
 	}
 
-	while (n > 0)
-	{
-		n /= 8;
-		num_char++;
-	}
-
-	_recursive_print_octal(num);
+	_recursive_print_octal(num, wb);
 
 	return (num_char);
 }

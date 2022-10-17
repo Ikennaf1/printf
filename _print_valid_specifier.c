@@ -6,7 +6,7 @@
  * @arg: The arg
  * Return: Number of characters printed
  */
-int _print_valid_specifier(char c, va_list arg)
+int _print_valid_specifier(char c, va_list arg, word_buffer *wb)
 {
 	int i = 0;
 	int num_char = 0;
@@ -27,8 +27,7 @@ int _print_valid_specifier(char c, va_list arg)
 	{
 		if (*specs[i].s == c)
 		{
-			num_char += specs[i].format_string(arg);
-			return (num_char);
+			specs[i].format_string(arg, wb);
 		}
 		i++;
 	}

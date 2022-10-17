@@ -5,9 +5,9 @@
  * @arg: The Char
  * Return: Num of chars printed
  */
-int _print_char(va_list arg)
+int _print_char(va_list arg, word_buffer *wb)
 {
-	_putchar(va_arg(arg, int));
+	_word_buffer_append(wb, va_arg(arg, int));
 
 	return (1);
 }

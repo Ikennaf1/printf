@@ -5,14 +5,14 @@
  * @n: The given integer
  * Return: Number of printed characters
  */
-void _recursive_print_binary(unsigned int n)
+void _recursive_print_binary(unsigned int n, word_buffer *wb)
 {
 	if (n / 2)
 	{
-		_recursive_print_binary(n / 2);
+		_recursive_print_binary(n / 2, wb);
 	}
 
-	_putchar((n % 2) + '0');
+	_word_buffer_append(wb, (n % 2) + '0');
 }
 
 /**
@@ -20,18 +20,12 @@ void _recursive_print_binary(unsigned int n)
  * @arg: The given integer
  * Return: Number of characters printed
  */
-int _print_binary(va_list arg)
+int _print_binary(va_list arg, word_buffer *wb)
 {
 	unsigned int num_char = 0;
 	unsigned int num = va_arg(arg, int);
-	unsigned int n = num;
 
-	while (n > 0)
-	{
-		n /= 2;
-		num_char++;
-	}
-	_recursive_print_binary(num);
+	_recursive_print_binary(num, wb);
 
 	return (num_char);
 }

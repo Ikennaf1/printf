@@ -10,6 +10,9 @@ int _print(const char *format, va_list arg)
 {
 	int num_char = 0;
 	int i = 0;
+	word_buffer wb;
+
+	_word_buffer_init(&wb);
 
 	while (format && format[i])
 	{
@@ -24,19 +27,21 @@ int _print(const char *format, va_list arg)
 				i++;
 
 			if (format[i] == '%')
-				num_char += _putchar(format[i]);
+				_word_buffer_append(&wb, '%');
 
 			if (_validate_specifier(format[i]))
 			{
-			num_char += _print_valid_specifier(format[i], arg);
+			num_char += _print_valid_specifier(format[i], arg, &wb);
 			}
 		}
 		else
 		{
-			num_char += _putchar(format[i]);
+			_word_buffer_append(&wb, format[i]);
 		}
 		i++;
 	}
+
+	num_char = _word_buffer_print(&wb);
 
 	return (num_char);
 }

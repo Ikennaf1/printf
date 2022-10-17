@@ -5,33 +5,33 @@
  * @n: Given integer
  * Return: Void
  */
-void _recursive_print_hex(int n)
+void _recursive_print_hex(int n, word_buffer *wb)
 {
 	if (n / 16)
-		_recursive_print_hex(n / 16);
+		_recursive_print_hex(n / 16, wb);
 
 	switch(n % 16)
 	{
 		case 10:
-			_putchar('a');
+			_word_buffer_append(wb, 'a');
 			break;
 		case 11:
-			_putchar('b');
+			_word_buffer_append(wb, 'b');
 			break;
 		case 12:
-			_putchar('c');
+			_word_buffer_append(wb, 'c');
 			break;
 		case 13:
-			_putchar('d');
+			_word_buffer_append(wb, 'd');
 			break;
 		case 14:
-			_putchar('e');
+			_word_buffer_append(wb, 'e');
 			break;
 		case 15:
-			_putchar('f');
+			_word_buffer_append(wb, 'f');
 			break;
 		default:
-			_putchar((n % 16) + '0');
+			_word_buffer_append(wb, (n % 16) + '0');
 	}
 }
 
@@ -40,28 +40,18 @@ void _recursive_print_hex(int n)
  * @arg: The given integer
  * Return: Number of characters printed
  */
-int _print_hex(va_list arg)
+int _print_hex(va_list arg, word_buffer *wb)
 {
-	int n, num_char = 0;
+	int num_char = 0;
 	int num = va_arg(arg, int);
 
-	n = num;
-
-	if (n < 0)
+	if (num < 0)
 	{
-		_putchar('-');
-		num_char++;
-		n *= -1;
-		num = n;
+		_word_buffer_append(wb, '-');
+		num *= -1;
 	}
 
-	while (n > 0)
-	{
-		n /= 16;
-		num_char++;
-	}
-
-	_recursive_print_hex(num);
+	_recursive_print_hex(num, wb);
 
 	return (num_char);
 }

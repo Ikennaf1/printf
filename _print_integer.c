@@ -5,13 +5,13 @@
  * @n: Given integer
  * Return: nothing
  */
-void _recursive_print_int(int n)
+void _recursive_print_int(int n, word_buffer *wb)
 {
 	if (n / 10)
 	{
-		_recursive_print_int(n / 10);
+		_recursive_print_int(n / 10, wb);
 	}
-	_putchar((n % 10) + '0');
+	_word_buffer_append(wb, (n % 10) + '0');
 }
 
 /**
@@ -19,7 +19,7 @@ void _recursive_print_int(int n)
  * @arg: The given integer
  * Return: Number of charcters printed
  */
-int _print_integer(va_list arg)
+int _print_integer(va_list arg, word_buffer *wb)
 {
 	int n;
 	int num = va_arg(arg, int);
@@ -29,7 +29,7 @@ int _print_integer(va_list arg)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		_word_buffer_append(wb, '-');
 		num_char++;
 		n *= -1;
 		num = n;
@@ -41,6 +41,6 @@ int _print_integer(va_list arg)
 		num_char++;
 	}
 
-	_recursive_print_int(num);
+	_recursive_print_int(num, wb);
 	return (num_char);
 }

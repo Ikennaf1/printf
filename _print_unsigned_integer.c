@@ -5,14 +5,14 @@
  * @n: The give n int
  * Return: Void
  */
-void _recursive_print_unsigned_integer(unsigned int n)
+void _recursive_print_unsigned_integer(unsigned int n, word_buffer *wb)
 {
 	if (n / 10)
 	{
-		_recursive_print_unsigned_integer(n / 10);
+		_recursive_print_unsigned_integer(n / 10, wb);
 	}
 
-	_putchar((n % 10) + '0');
+	_word_buffer_append(wb, (n % 10) + '0');
 }
 
 /**
@@ -20,17 +20,11 @@ void _recursive_print_unsigned_integer(unsigned int n)
  * @arg: the given integer
  * Return: Number of characters printed
  */
-int _print_unsigned_integer(va_list arg)
+int _print_unsigned_integer(va_list arg, word_buffer *wb)
 {
 	unsigned int num_char = 0, num = va_arg(arg, unsigned int);
-	int n = num;
 
-	while (n > 0)
-	{
-		n /= 10;
-		num_char++;
-	}
-	_recursive_print_unsigned_integer(num);
+	_recursive_print_unsigned_integer(num, wb);
 
 	return (num_char);
 }
