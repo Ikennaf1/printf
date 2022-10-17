@@ -18,6 +18,12 @@ int _print_binary(va_list arg);
 void _recursive_print_binary(unsigned int n);
 int _print_unsigned_integer(va_list arg);
 void _recursive_print_unsigned_integer(unsigned int n);
+int _print_octal(va_list arg);
+void _recursive_print_octal(int n);
+int _print_hexadecimal(va_list arg);
+void _recursive_print_hexadecimal(int n);
+int _print_hex(va_list arg);
+void _recursive_print_hex(int n);
 
 /**
  * struct formatic - Struct for the formatting functions

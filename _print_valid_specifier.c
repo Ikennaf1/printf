@@ -17,6 +17,9 @@ int _print_valid_specifier(char c, va_list arg)
 		{"i", _print_integer},
 		{"u", _print_unsigned_integer},
 		{"b", _print_binary},
+		{"o", _print_octal},
+		{"x", _print_hex},
+		{"X", _print_hexadecimal},
 		{NULL, NULL}
 	};
 

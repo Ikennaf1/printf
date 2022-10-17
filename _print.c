@@ -4,7 +4,7 @@
  * _print - Prints the chars
  * @format: The string
  * @arg: The arguments
- * Return - num of chars printed
+ * Return: num of chars printed
  */
 int _print(const char *format, va_list arg)
 {

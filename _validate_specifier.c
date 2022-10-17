@@ -7,7 +7,7 @@
  */
 int _validate_specifier(char c)
 {
-	char specifiers[] = {'c', 's', 'd', 'i', 'b', 'u'};
+	char specifiers[] = {'c', 's', 'd', 'i', 'b', 'u', 'o', 'x', 'X'};
 	int i = 0;
 
 	while (specifiers[i])

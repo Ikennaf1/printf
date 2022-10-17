@@ -9,10 +9,10 @@ void _recursive_print_unsigned_integer(unsigned int n)
 {
 	if (n / 10)
 	{
-		_recursive_print_unsigned_integer(n /10);
+		_recursive_print_unsigned_integer(n / 10);
 	}
 
-	_putchar((n %10) + '0');
+	_putchar((n % 10) + '0');
 }
 
 /**
@@ -25,7 +25,7 @@ int _print_unsigned_integer(va_list arg)
 	unsigned int num_char = 0, num = va_arg(arg, unsigned int);
 	int n = num;
 
-	while(n > 0)
+	while (n > 0)
 	{
 		n /= 10;
 		num_char++;
