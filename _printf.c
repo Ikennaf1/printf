@@ -7,17 +7,17 @@
  */
 int _printf(const char *format, ...)
 {
-	int num_char = 0;
-	va_list args;
+	unsigned int num_char = 0;
+	va_list arg;
 
 	if (format == NULL)
 		return (-1);
 
-	va_start(args, format);
+	va_start(arg, format);
 
-	num_char = _print(format, args);
+	num_char = _print(format, arg);
 
-	va_end(args);
+	va_end(arg);
 
 	return (num_char);
 }

@@ -1,3 +1,4 @@
 333
 *.exe
+*.exe*
 main.c

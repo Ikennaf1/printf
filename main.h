@@ -12,6 +12,12 @@ int _print_valid_specifier(char c, va_list arg);
 int _print_invalid_specifier(char prev_char, char c);
 int _print_char(va_list arg);
 int _print_string(va_list arg);
+int _print_integer(va_list arg);
+void _recursive_print_int(int n);
+int _print_binary(va_list arg);
+void _recursive_print_binary(unsigned int n);
+int _print_unsigned_integer(va_list arg);
+void _recursive_print_unsigned_integer(unsigned int n);
 
 /**
  * struct formatic - Struct for the formatting functions

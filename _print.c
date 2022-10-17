@@ -37,7 +37,6 @@ int _print(const char *format, va_list arg)
 		}
 		i++;
 	}
-	if (arg)
-	{}
+
 	return (num_char);
 }
