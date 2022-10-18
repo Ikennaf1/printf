@@ -21,6 +21,10 @@ int _print_valid_specifier(char c, va_list arg, word_buffer *wb)
 		{"o", _print_octal},
 		{"x", _print_hex},
 		{"X", _print_hexadecimal},
+		{"S", _print_all_chars},
+		/*{"p", _print_pointer},*/
+		{"r", _print_string_reverse},
+		{"R", _print_string_rot13},
 		{NULL, NULL}
 	};
 

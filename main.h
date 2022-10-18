@@ -37,6 +37,17 @@ int _print_hexadecimal(va_list arg, word_buffer *wb);
 void _recursive_print_hexadecimal(int n, word_buffer *wb);
 int _print_hex(va_list arg, word_buffer *wb);
 void _recursive_print_hex(int n, word_buffer *wb);
+int _print_all_chars(va_list arg, word_buffer *wb);
+int _print_pointer(va_list arg, word_buffer *wb);
+int _validate_flag(char c);
+int _run_valid_flag(char c, va_list arg, word_buffer *wb);
+int _run_flag_hash(va_list arg, char next_char, word_buffer *wb);
+int _run_flag_space(va_list arg, word_buffer *wb);
+int _run_flag_plus(va_list arg, word_buffer *wb);
+int _run_flag_zero(va_list arg, word_buffer *wb);
+int _run_flag_left_justify(va_list arg, word_buffer *wb);
+int _print_string_reverse(va_list arg, word_buffer *wb);
+int _print_string_rot13(va_list arg, word_buffer *wb);
 
 /**
  * struct formatic - Struct for the formatting functions
