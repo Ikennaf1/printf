@@ -1,5 +1,6 @@
 # A poor man's printf function
 
+<<<<<<< HEAD
 printf()
 
 This printf project is a collaboration between Tebogo Kgonothi and Ikenna Isiogu, students of Software Engineering at Alx africa. The project contains a function name "printf" imitates the actual "prinf" command located in the stdio.h library. It contains some of the basic features and functions found in the manual 3 of "printf".
@@ -29,3 +30,6 @@ r	Reverse string of characters
 R	ROT13 translation of string
 S	String with special chars replaced by their ASCII value
 %	Character
+=======
+# A printf collaboration project by Tebogo Clive Kgonothi - GitHub profile: Tebogoclive, and Ikenna Isiogu - GitHub profile: Ikennaf1
+>>>>>>> ff20106a5b01e7d394fd09892dc1be5266730e1c
