@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rot13 - encrypts a string
+ * _print_string_rot13 - encrypts a string
  * @arg: Input string
  * @wb:The buffer
  * Return: final string
