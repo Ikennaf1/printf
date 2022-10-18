@@ -4,6 +4,7 @@
  * _print_valid_specifier - Formats and prints the args for a specifier
  * @c: Each character of given arg
  * @arg: The arg
+ * @wb: The buffer
  * Return: Number of characters printed
  */
 int _print_valid_specifier(char c, va_list arg, word_buffer *wb)

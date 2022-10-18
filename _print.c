@@ -31,7 +31,7 @@ int _print(const char *format, va_list arg)
 
 			if (_validate_specifier(format[i]))
 			{
-			num_char += _print_valid_specifier(format[i], arg, &wb);
+				_print_valid_specifier(format[i], arg, &wb);
 			}
 		}
 		else

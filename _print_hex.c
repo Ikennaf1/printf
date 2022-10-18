@@ -3,6 +3,7 @@
 /**
  * _recursive_print_hex - Prints base 16 of a given integer
  * @n: Given integer
+ * @wb: The buffer
  * Return: Void
  */
 void _recursive_print_hex(int n, word_buffer *wb)
@@ -10,7 +11,7 @@ void _recursive_print_hex(int n, word_buffer *wb)
 	if (n / 16)
 		_recursive_print_hex(n / 16, wb);
 
-	switch(n % 16)
+	switch (n % 16)
 	{
 		case 10:
 			_word_buffer_append(wb, 'a');
@@ -38,6 +39,7 @@ void _recursive_print_hex(int n, word_buffer *wb)
 /**
  * _print_hex - Prints base 16 conversion of an integer
  * @arg: The given integer
+ * @wb: The buffer
  * Return: Number of characters printed
  */
 int _print_hex(va_list arg, word_buffer *wb)

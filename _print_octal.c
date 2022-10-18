@@ -3,6 +3,7 @@
 /**
  * _recursive_print_octal - Prints base 8 conversion of a number
  * @n: Given integer
+ * @wb: The buffer
  * Return: Void
  */
 void _recursive_print_octal(int n, word_buffer *wb)
@@ -16,6 +17,7 @@ void _recursive_print_octal(int n, word_buffer *wb)
 /**
  * _print_octal - Prints base 8 conversion of an integer
  * @arg: Given arg
+ * @wb: The buffer
  * Return: The converted number
  */
 int _print_octal(va_list arg, word_buffer *wb)

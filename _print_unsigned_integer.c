@@ -3,6 +3,7 @@
 /**
  * _recursive_print_unsigned_integer - Prints unsigned int recursively
  * @n: The give n int
+ * @wb: The buffer
  * Return: Void
  */
 void _recursive_print_unsigned_integer(unsigned int n, word_buffer *wb)
@@ -18,6 +19,7 @@ void _recursive_print_unsigned_integer(unsigned int n, word_buffer *wb)
 /**
  * _print_unsigned_integer - Prints unsigned integer
  * @arg: the given integer
+ * @wb: The buffer
  * Return: Number of characters printed
  */
 int _print_unsigned_integer(va_list arg, word_buffer *wb)

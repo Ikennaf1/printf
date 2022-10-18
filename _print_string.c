@@ -3,6 +3,7 @@
 /**
  * _print_string - Prints formatted string
  * @arg: The given arg string
+ * @wb: The buffer
  * Return: Num of char printed
  */
 int _print_string(va_list arg, word_buffer *wb)

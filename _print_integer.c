@@ -3,6 +3,7 @@
 /**
  * _recursive_print_int - prints individual int
  * @n: Given integer
+ * @wb: The buffer
  * Return: nothing
  */
 void _recursive_print_int(int n, word_buffer *wb)
@@ -17,6 +18,7 @@ void _recursive_print_int(int n, word_buffer *wb)
 /**
  * _print_integer - Prints an integer
  * @arg: The given integer
+ * @wb: The buffer
  * Return: Number of charcters printed
  */
 int _print_integer(va_list arg, word_buffer *wb)
