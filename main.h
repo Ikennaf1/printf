@@ -42,7 +42,6 @@ int _validate_flag(char c);
 int _run_valid_flag(char c, va_list arg, word_buffer *wb);
 int _run_flag_space(va_list arg, word_buffer *wb);
 int _run_flag_plus(va_list arg, word_buffer *wb);
-int _run_flag_zero(va_list arg, word_buffer *wb);
 int _run_flag_left_justify(va_list arg, word_buffer *wb);
 int _print_string_reverse(va_list arg, word_buffer *wb);
 int _print_string_rot13(va_list arg, word_buffer *wb);
