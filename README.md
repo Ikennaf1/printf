@@ -30,6 +30,28 @@ Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wal
 
 - *_putchar.c:*
 	- int _putchar(char c) - function to print char
-- *strlen.c:
+- *strlen.c:*
 	- int _strlen(char *string) - gets string length
+- *get_bin.c:*
+	- int_bin(va_list bin) - function to print
+- *get_char.c:*
+	- int ch(va_list character) -  function to return char
+- *get_hex.c:*
+	- int _hex_str(unsigned int n, unsigned int hex, char alpha) - converts the number from base 10 to hex 
+- *get_inc.c:*
+	- int _int(va_list integ) - function to print integers
+- *get_oct.c:*
+	- int _oct(va_list octo) - function to print octal
+- *get_rot13.c*
+	- int _rot13(va_list rot) - prints rot13 version
+- *get_str.c:*
+	- int str(va_list *s) - prints string to stdout
+- *get_unsigned.c:*
+	- int _ui(va_list unsign) - unsigned int print to stdout
+- main.h: header file
+- man_printf: _printf man page
+- printf.c: main custom _printf function 
+	
+   
+
    
