@@ -1,4 +1,4 @@
-#printf
+# printf
 -------------------------------------------------------------------------------
 This printf project is a collaboration between Tebogo Kgonothi and Ikenna Isiogu, students of Software Engineering at Alx africa. The project contains a function name "printf" which imitates the actual "printf" command located in the stdio.h library. It contains some of the basic features and functions found in the manual 3 of "printf".
 
@@ -22,3 +22,14 @@ Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wal
 - va_end (man 3 va_end)
 - va_copy (man 3 va_copy)
 - va_arg (man 3 va_arg)
+
+## Custom printf function
+------------------------------------------------------------------------------
+### Files and functions
+------------------------------------------------------------------------------
+
+- *_putchar.c:*
+	- int _putchar(char c) - function to print char
+- *strlen.c:
+	- int _strlen(char *string) - gets string length
+   
