@@ -14,7 +14,14 @@ int _printf(const char *format, ...)
 | Specifier |    Character  |
 | ----------| --------------|
 |S          | String of characters|
-| ----------| --------------------|
+|c          | Single character|
+|d or i     | Signed decimal integer|
+|o			| Signed octal (base 8) |
+|u			| Unsigned decimal integer|
+|x			| Unsigned hexadecimal integer |
+|X			| Unsigned hexadecimal integer (Capital letters) |
+|p			| Pointer address		|
+|%			| % character  | 
 
 ## Project Requirements
 ------------------------------------------------------------------------------
