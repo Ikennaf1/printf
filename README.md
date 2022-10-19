@@ -8,6 +8,14 @@ printf() is a function that performs formatted output conversion and print data 
 
 int _printf(const char *format, ...)
 
+## Character specifier
+---
+
+| Specifier |    Character  |
+| ----------| --------------|
+|S          | String of characters|
+| ----------| --------------------|
+
 ## Project Requirements
 ------------------------------------------------------------------------------
 - All files will be compiled on Ubuntu 14.04 LTS
